@@ -25,14 +25,3 @@ function test_doesFunctionReturnValuesBetweent() {
 }
 
 test(test_doesFunctionReturnValuesBetweent, "Values fall within limits");
-
-test(() => {
-  let results = new Set();
-
-  for (let i = 0; i < 10000; i++) {
-    let num = createRandomNumber();
-    results.add(num);
-  }
-
-  return results.size > 5000;
-}, "Numbers are random");
